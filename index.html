@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Web Design</title>
+		<!-- Needed for using jQuery -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="my_script.js"></script>
+		<script type="text/javascript" src="menu_drinks.js"></script>
+		<script type="text/javascript" src="menu_food.js"></script>
+		<link rel="stylesheet" type="text/css" href="my_style.css">
+    </head>
+    <body>
+        <!------------------ START  ---------------------------->
+		<div class="banner" id="goToHome">
+			<div class="dimOverlay"></div>
+			<div class="header centerHorizontally"><img src="./images/pacific_catch_logo.png"></div>
+			<div class="menu centerHorizontally">
+				<ul>
+					<li><a href="#goToHome">Home</a></li>
+					<li><a href="#goToRestaurant">Restaurant</a></li>
+					<li><a href="#goToFoodMenu">Menu</a></li>
+					<li><a href="#goToDrinks">Drinks</a></li>
+					<li><a href="#goToReserve">Reservations</a></li>
+				</ul>
+			</div>
+			<div class="title centerHorizontally">A New American Classic</div>
+			<div class="subtitle centerHorizontally">Locally Sourced. Made with Love.</div>
+		</div> <!-- end banner -->
+		
+		<!-- welcome -->
+		<div class="welcomeSection">
+			<div class="intro" id="goToRestaurant">
+				<h3>Located in San Francisco, Pacific Catch is a purveyor of fine American dining from the esteemed Chef Billy Lang.</h3>
+				<h4>PHOTOS BY NICOLE FRANZEN</h4>
+				<p>Pacific Catch is a modern, comfortable, Westcoast Fish House that combines fine-dining culinary experience with a casual California lifestyle. Dedicated to delivering high quality seafood with a unique perspective, the menu explores preparation styles and ingredients found throughout the Pacific.  We also offer a variety of lunch and dinner Daily Catch specials and a rotation of promotions highlighting a specific region in the Pacific, or local, seasonal offerings.</p>
+			</div>
+			<div class="operation">
+				<h4>Phone</h4>
+				<p>(415) 440-1950</p><br>
+				
+				<h4>Location</h4>
+				<p>2027 Chestnut Street<br> San Francisco, CA 94123</p><br>
+				
+				<h4>Hours</h4>
+				<p><b>M-Th</b> 5pm-11pm</p>
+				<p><b>F-Sa</b> 12pm-11pm</p>
+				<p><b>Su</b> 10am-11pm</p>
+			</div>
+		</div> <!-- end welcome -->
+		
+		
+		<!-- Slider of Food Images -->
+		<!-- Slider -->
+        <div class="slider">
+            <div class="outer">
+                <div class="innerwrap">
+                	
+                	<!-- Sliding Panel 1-->
+                    <div class="inner"><div class="frontPageImg imgSource1"></div></div>
+					<!-- Sliding Panel 2-->
+                    <div class="inner"><div class="frontPageImg imgSource2"></div></div>
+					<!-- Sliding Panel 3-->
+                    <div class="inner"><div class="frontPageImg imgSource3"></div></div>
+                    
+                </div><!-- end innerwrap -->
+            </div><!-- end outer -->
+            <div id="prev" class="arrow"><img src="./images/prev.png"></div>
+            <div id="next" class="arrow"><img src="./images/next.png"></div>
+            </div>
+
+	
+		<!-- Logo above food menu-->
+		<div class="foodLogo">
+			<div class="centerBoth"><img src="./images/pacific_catch_logo.png"></div>
+		</div>
+		
+		<!-- Food Menu -->
+		<div class="food" id="goToFoodMenu">
+			
+			<div class="centerHorizontally"><h4>Starters</h4></div>
+			<div class="foodCategory centerHorizontally" id="starters">
+			    <div class="column" id="column1">
+					<div class="item">
+						<div class="foodTitle">Bellini</div>
+						<div class="foodPrice">$15</div>
+						<div class="foodDescription"><p>bubbles and grapefruit</p></div> 
+					</div> 
+			    </div>
+				<div class="column" id="column2"></div>
+				<div class="column" id="column3"></div>
+			</div> <!-- end wrapper -->
+			
+			<div class="centerHorizontally"><h4>Sandwiches</h4></div>
+			<div class="foodCategory centerHorizontally" id="sandwiches">
+			    <div class="column" id="column1"></div>
+				<div class="column" id="column2"></div>
+				<div class="column" id="column3"></div>
+			</div> <!-- end wrapper -->
+			
+			<div class="centerHorizontally"><h4>Mains</h4></div>
+			<div class="foodCategory centerHorizontally" id="mains">
+			    <div class="column" id="column1"></div>
+				<div class="column" id="column2"></div>
+				<div class="column" id="column3"></div>
+			</div> <!-- end wrapper -->
+		</div> <!-- end food -->
+		
+		
+		
+		<!-- Drinks -->
+		<div class="drinks" id="goToDrinks">
+	    	<div class="dimOverlay"></div>
+			<div class="wrapper centerHorizontally">
+			    <div class="column" id="column1">
+			    	<div class="drinkCategory"><h4>Cocktails</h4></div>
+					<!--example 
+					<div class="item">
+						<div class="drinkTitle">Bellini</div>
+						<div class="drinkPrice">$15</div>
+						<div class="drinkDescription"><p>bubbles and grapefruit</p></div> 
+					</div> -->
+				</div>
+				<div class="column" id="column2">
+					<div class="drinkCategory"><h4>Wine</h4></div>
+				</div>
+				<div class="column" id="column3">
+					<div class="drinkCategory"><h4>Beer</h4></div>
+				</div>
+			</div> <!-- end wrapper -->
+		</div><!-- end drinks -->
+		
+		
+		<!-- Reservations -->
+		<div class="reservations" id="goToReserve">
+			<div class="centerHorizontally r1">
+				<h4>Reservations</h4>
+			</div>
+			<div class="centerHorizontally r2">
+				<p>Call (347) 555-1234 from 10am - 11pm daily, or book online with OpenTable.<br> 
+			    Reservations required for parties of 6 or more.</p>
+			 </div>
+		</div>
+    </body>
+</html>
