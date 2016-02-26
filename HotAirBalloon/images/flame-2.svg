@@ -1,0 +1,24 @@
+<svg width="210" height="380" xmlns="http://www.w3.org/2000/svg">
+ <title>flame</title>
+ <defs>
+  <radialGradient spreadMethod="pad" id="svg_1" cx="0.296875" cy="0.460938" r="0.5">
+   <stop offset="0" stop-opacity="0.996094" stop-color="#3d1a1a"/>
+   <stop offset="1" stop-opacity="0.996094" stop-color="#7f0000"/>
+  </radialGradient>
+  <linearGradient id="svg_9" x1="0" y1="0" x2="1" y2="0">
+   <stop stop-color="#f77c09" stop-opacity="0.996094" offset="0.058594"/>
+   <stop stop-color="#ff470a" stop-opacity="0.996094" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="382" width="212" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text xml:space="preserve" y="231" x="-29" text-anchor="middle" stroke-width="0" stroke-linejoin="null" stroke-linecap="square" stroke-dasharray="null" stroke="#096388" fill="#000000" opacity="0.5" font-size="24" font-family="Arial" id="svg_12"/>
+  <path d="m96,12.5c32.56702,40.1333 -16.16699,101 -76,203.5c-59.8333,102.5 74,154.16699 84.66699,155.16699c10.66602,1 -52,-39.16699 -32.16699,-100.16699c19.83301,-61 67.53302,-95.53301 79.5,-142.10001c11.96698,-46.56699 -88.56702,-156.53332 -56,-116.39999z" stroke-width="0" stroke-linejoin="round" stroke-linecap="square" stroke="#0090ff" fill="url(#svg_9)" id="svg_24"/>
+  <path d="m159.55899,132.442c2.866,6.776 3.69501,18.91001 -0.716,32.924c-4.40998,14.014 -10.05899,24.309 -22.15,41.00599c-12.08999,16.69701 -24.668,27.33202 -47.30298,63.122c-22.63501,35.79101 17.15699,74.64801 9.86399,61.65201c-7.29199,-12.99701 3.858,-37.86399 17.45901,-52.51899c13.60199,-14.65502 22.86899,-26.199 32.04898,-38.12002c18.35901,-23.84299 23.68601,-39.454 24.555,-53.206c0.86801,-13.75099 0.953,-18.14199 -3.63498,-33.24398c-4.58902,-15.10201 -15.85401,-35.16501 -10.12302,-21.61501z" stroke-width="0" stroke-linejoin="round" stroke-linecap="square" stroke="url(#svg_1)" fill="url(#svg_9)" id="svg_25"/>
+  <path d="m116.621,354.22501c-5.172,9.16198 -6.64801,-19.29102 2.55701,-43.92301c9.20599,-24.63101 38.26398,-46.29599 50.759,-69.59601c12.49399,-23.30099 20.384,-58.53698 10.36698,-77.28199c-10.017,-18.745 1.76901,2.15699 10.21301,15.57c8.44299,13.41298 13.19501,23.27001 12.98401,45.20299c-0.211,21.93402 -5.94202,47.65 -43.78302,81.27802c-37.84098,33.62799 -37.92499,39.587 -43.09699,48.75z" stroke-width="0" stroke-linejoin="round" stroke-linecap="square" stroke="#0090ff" fill="url(#svg_9)" id="svg_26"/>
+ </g>
+</svg>

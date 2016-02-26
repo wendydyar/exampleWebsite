@@ -1,0 +1,20 @@
+<?xml version="1.0"?><svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+ <title>flame</title>
+ <defs>
+  <radialGradient r="0.5" cy="0.460938" cx="0.296875" id="svg_1" spreadMethod="pad">
+   <stop stop-color="#3d1a1a" stop-opacity="0.996094" offset="0"/>
+   <stop stop-color="#7f0000" stop-opacity="0.996094" offset="1"/>
+  </radialGradient>
+  <linearGradient y2="0" x2="1" y1="0" x1="0" id="svg_9">
+   <stop offset="0.058594" stop-opacity="0.996094" stop-color="#f77c09"/>
+   <stop offset="1" stop-opacity="0.996094" stop-color="#ff470a"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <text id="svg_12" font-family="Arial" font-size="24" opacity="0.5" fill="#000000" stroke="#096388" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="null" stroke-width="0" text-anchor="middle" x="-29" y="231" xml:space="preserve"/>
+  <path id="svg_24" fill="url(#svg_9)" stroke="#0090ff" stroke-linecap="square" stroke-linejoin="round" stroke-width="0" d="m305,47.5c32.567017,40.133301 -16.166992,101 -76,203.5c-59.833298,102.5 74,154.166992 84.666992,155.166992c10.666016,1 -52,-39.166992 -32.166992,-100.166992c19.833008,-61 67.53302,-95.533005 79.5,-142.100006c11.96698,-46.566994 -88.567017,-156.533324 -56,-116.399994z"/>
+  <path id="svg_25" fill="url(#svg_9)" stroke="url(#svg_1)" stroke-linecap="square" stroke-linejoin="round" stroke-width="0" d="m386.55899,166.442001c2.865997,6.776001 3.695007,18.910004 -0.716003,32.923996c-4.409973,14.014008 -10.05899,24.309006 -22.149994,41.005997c-12.089996,16.697006 -24.667999,27.332016 -47.302979,63.121994c-22.63501,35.791016 17.156982,74.64801 9.863983,61.652008c-7.291992,-12.997009 3.858002,-37.863983 17.459015,-52.518982c13.60199,-14.655029 22.868988,-26.199005 32.048981,-38.120026c18.359009,-23.842987 23.686005,-39.453995 24.554993,-53.205994c0.868011,-13.750992 0.953003,-18.141998 -3.634979,-33.243988c-4.58902,-15.102005 -15.854004,-35.165009 -10.123016,-21.615005z"/>
+  <path id="svg_26" fill="url(#svg_9)" stroke="#0090ff" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="0" d="m353.621002,424.225006c-5.171997,9.161987 -6.64801,-19.291016 2.557007,-43.923004c9.205994,-24.631012 38.263977,-46.29599 50.759003,-69.596008c12.493988,-23.300995 20.384003,-58.536987 10.366974,-77.281998c-10.016998,-18.744995 1.769012,2.156998 10.213013,15.570007c8.442993,13.412979 13.195007,23.270004 12.984009,45.202988c-0.210999,21.934021 -5.942017,47.649994 -43.78302,81.278015c-37.840973,33.627991 -37.924988,39.587006 -43.096985,48.75z"/>
+ </g>
+</svg>

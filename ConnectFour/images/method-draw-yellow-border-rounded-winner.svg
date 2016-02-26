@@ -1,0 +1,26 @@
+<svg width="101" height="101" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <radialGradient cy="0.5" cx="0.5" gradientTransform="translate(0.995,0) scale(-0.99,1)" r="0.524355" spreadMethod="pad" id="svg_11">
+   <stop stop-opacity="0.996094" offset="0.710938" stop-color="#ffff00"/>
+   <stop offset="0.863281" stop-opacity="0.992188" stop-color="#fff8ad"/>
+   <stop offset="0.988281" stop-opacity="0.996094" stop-color="#ffff00"/>
+  </radialGradient>
+  <radialGradient r="0.5" cy="0.5" cx="0.5" spreadMethod="pad" id="svg_15">
+   <stop offset="0.75" stop-color="#fffa8d"/>
+   <stop offset="1" stop-opacity="0.992188" stop-color="#fff200"/>
+  </radialGradient>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="103" height="103" id="canvas_background" fill="none"/>
+  <g id="canvasGrid" display="none">
+   <rect id="svg_3" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse stroke="#ffff00" fill="url(#svg_11)" cx="50.5" cy="50.500001" id="svg_2" rx="50" ry="50"/>
+  <ellipse fill="url(#svg_15)" cx="50.333333" cy="50.166667" id="svg_1" rx="40" ry="40"/>
+ </g>
+</svg>
