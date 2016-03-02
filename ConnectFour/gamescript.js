@@ -686,7 +686,6 @@ function playGame() {
         }//end event listeners
 
         _switchPlayers = function(){
-            //_oCurrentPlayer = (_oCurrentPlayer == _oPlayer0)? _oPlayer1 : _oPlayer0;
             if(_oCurrentPlayer == _oPlayer0){
                 _oCurrentPlayer = _oPlayer1;
                 _oPlayer1.enableActivity();
@@ -715,23 +714,42 @@ function playGame() {
 
         _dropFloatingChip = function(){
             if (_bFloatingChip) {
+                // Check if there is sufficient space to drop the chip
                 var nStackSize = _oGame.getGameBoard()[_nCurrentColumnId].length;
                 if(nStackSize == nGameDimensionY){
                     //The game column is already filled to it's maximum dimension, no new chips may be placed there
                     _deleteFloatingChip();
                     return;
                 }
+
+                //Drop the Chip
+                //Raise the shield to prevent user interaction while dropping the chip
+                _raiseShield();
                 _nCurrentColumnCenter = ((0.5 * nGameColumnWidth) + (_nCurrentColumnId * nGameColumnWidth)) + 6 - nGamePieceDimension / 2; /* add 6px for gameContainer margin */
                 var nDistanceFromBottom = 0.5 * nGameColumnVerticalChipSpace + nStackSize * nGameColumnVerticalChipSpace + nGamePieceDimension / 2;
                 var nDistanceFromTop = nHeaderHeight + nGameContainerHeight - nDistanceFromBottom;
                 var lastPlayPosition = [_nCurrentColumnId,nStackSize];
+
                 //Update game array
                 _oGame.getGameBoard()[_nCurrentColumnId].push(_oCurrentPlayer);
-                //Place chip in final position
+
+                /*
+                //Place chip in final position and animate the drop
                 $(_oCurrentChip.getChipElement()).css({
                     left: _nCurrentColumnCenter,
-                    top: nDistanceFromTop
+                    top: nDistanceFromTop,
+                    "-webkit-animation" : "bounce 0.4s both"
                 });
+                */
+                //Place chip in final position and animate the drop
+                var dropTime = 350 * nDistanceFromTop/nGameContainerHeight;
+                $(_oCurrentChip.getChipElement()).animate({left: _nCurrentColumnCenter, top: nDistanceFromTop}, dropTime, "easeInCubic", function(){
+                    $(this).css({"animation" : "bounce 0.4s both",
+                        "-webkit-animation" : "bounce 0.4s both",
+                        "-moz-animation" : "bounce 0.4s both",
+                        "-o-animation" : "bounce 0.4s both"});
+                });
+
                 //Update the chip's id with a position so it is more informative
                 _oCurrentChip.updateChipId(lastPlayPosition[0], lastPlayPosition[1]);
                 _aChipsInPlay.push(_oCurrentChip);
@@ -739,7 +757,9 @@ function playGame() {
 
                 //Check for a winner
                 var aRoundResults = _oGameEngine.checkWinner(_oScoreBoard, _oGame.getGameBoard(), lastPlayPosition, _oCurrentPlayer);
-                _handleRoundResults(aRoundResults);
+
+                //Wait for bounce animation to finish (which takes 0.8s/800ms) before handling the round results
+                setTimeout(function(){ _handleRoundResults(aRoundResults); }, 400);
             }
         }
 
@@ -755,7 +775,6 @@ function playGame() {
             var aWinningChips = aRoundResults[1];
             var nRoundScore = aRoundResults[2];
             if (bRoundHasWinner) {
-                _raiseShield();
                 var nChipsAnimated = 0;
                 for (var n = 0; n < aWinningChips.length; n++) {
 
@@ -773,9 +792,13 @@ function playGame() {
                 }
             }
             else
-                {
+            {
                     _switchPlayers();
-                }
+            }
+
+            //Resume Play
+            _lowerShield();
+
         }
 
         _deleteAllChipsInPlay = function(){

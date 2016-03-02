@@ -129,15 +129,24 @@ body{
     background-size: contain;
     /*-webkit-animation-name: rotateOut;*/  /* This animation property is applied in JS when a player wins */
     /*animation-name: rotateOut;*/
+
+    /*-webkit-animation: bounce 1s both;*/
+
+
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 
+/*
     -webkit-transition: top 0.8s ease;
     -moz-transition: top 0.8s ease;
     -o-transition: top 0.8s ease;
     transition: top 0.8s ease;
+*/
+}
+.bounceAnimation{
+    -webkit-animation: bounce 1s both;
 }
 .bottomChip, .topChip{
     position: absolute;
@@ -299,5 +308,117 @@ svg{
         -webkit-transform: rotate3d(0, 0, 1, 200deg);
         transform: rotate3d(0, 0, 1, 200deg);
         opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    0%{
+        /* going down */
+        transform: translateY(0%);
+        animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+
+    }
+    30%{
+        /* going up */
+        transform: translateY(-80%);
+        animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+    }
+    60%{
+        /* going down */
+        transform: translateY(0%);
+        animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+    }
+    80%{
+        /* going up */
+        transform: translateY(-20%);
+        animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+
+    }
+    100%{
+        /* going down */
+        transform: translateY(0%);
+        animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+    }
+}
+@-webkit-keyframes bounce {
+    0%{
+        /* going down */
+        -webkit-transform: translateY(0%);
+        -webkit-animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+    }
+    30%{
+        /* going up */
+        -webkit-transform: translateY(-80%);
+        -webkit-animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+    }
+    60%{
+        /* going down */
+        -webkit-transform: translateY(0%);
+        -webkit-animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+    }
+    80%{
+        /* going up */
+        -webkit-transform: translateY(-20%);
+        -webkit-animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+    }
+    100%{
+        /* going down */
+        -webkit-transform: translateY(0%);
+        -webkit-animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+    }
+}
+@-moz-keyframes bounce {
+    0%{
+        /* going down */
+        -moz-transform: translateY(0%);
+        -moz-animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+    }
+    30%{
+        /* going up */
+        -moz-transform: translateY(-80%);
+        -moz-animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+    }
+    60%{
+        /* going down */
+        -moz-transform: translateY(0%);
+        -moz-animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+    }
+    80%{
+        /* going up */
+        -moz-transform: translateY(-20%);
+        -moz-animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+    }
+    100%{
+        /* going down */
+        -moz-transform: translateY(0%);
+        -moz-animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+    }
+}
+@-o-keyframes bounce {
+    0%{
+        /* going down */
+        -o-transform: translateY(0%);
+        -o-animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+    }
+    30%{
+        /* going up */
+        -o-transform: translateY(-80%);
+        -o-animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+    }
+    60%{
+        /* going down */
+        -o-transform: translateY(0%);
+        -o-animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+    }
+    80%{
+        /* going up */
+        -o-transform: translateY(-20%);
+        -o-animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+
+    }
+    100%{
+        /* going down */
+        -o-transform: translateY(0%);
+        -o-animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
     }
 }
