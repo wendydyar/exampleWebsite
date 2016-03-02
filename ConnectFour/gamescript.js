@@ -274,11 +274,12 @@ function playGame() {
             chip.appendChild(topChip);
 
             document.getElementById("chipContainer").appendChild(chip);
+            console.log("Event Page X:  "  + event.pageX);
             //Place the chip in the exact center of a column.
             //The left position we are giving is with respect to the chip's parent element.
             //Therefore, when we take pageX we have to subtract the distance to where the left edge of the container begins.
             $(chip).css({
-                left: (event.pageX - nGameContainerLeft + 6 - nGamePieceDimension/2), /* subtract 6px for gameContainer margin */
+                left: (event.target.offsetLeft + event.target.offsetWidth/2 + 6 - nGamePieceDimension/2), /* add 6px for gameContainer margin */
                 top: "20px"
             });
 
@@ -648,6 +649,9 @@ function playGame() {
             //For each game board column, add an event listener to know when the mouse has been released
             for (var i = 0; i < allGameBoardColumns.length; i++) {
                 $(allGameBoardColumns[i]).on("mousedown", function (event) {
+                    //Always update the reference point of the left side of the game container
+                    //so the chip can follow along when moved
+                    nGameContainerLeft = $(oGameContainer).offset().left;
                     if(_bFloatingChip){
                         //A Chip has already been created, do not created another one
                     }else{
@@ -667,7 +671,8 @@ function playGame() {
             $('#centerBody').on('mousemove', function (event) {
                 if (_bFloatingChip) {
                     // Follow the mouse
-                    $(_oCurrentChip.getChipElement()).css({left: (event.pageX - nGameContainerLeft + 6 - nGamePieceDimension/2), /* add 6px for gameContainer margin */
+                    $(_oCurrentChip.getChipElement()).css({
+                        left: (event.pageX - nGameContainerLeft + 6 - nGamePieceDimension/2), /* add 6px for gameContainer margin */
                         top: "20px"});
                 }
             });//end mousemove
