@@ -26,7 +26,7 @@ function playGame() {
     var nGameColumnWidth = nGameContainerWidth / nGameDimensionX;
     var nGameColumnVerticalChipSpace = nGameContainerHeight / nGameDimensionY;
     var nHeaderHeight = oHeader.offsetHeight;
-    var nGamePieceDimension = 0.90 * nGameColumnVerticalChipSpace;
+    var nGamePieceDimension = Math.round(0.90 * nGameColumnVerticalChipSpace);
 
     /*
      *   COUNTER
