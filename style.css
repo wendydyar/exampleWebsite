@@ -61,6 +61,7 @@ body{
 }
 .name{
     color: white;
+    font-family: "museo-sans", "sans-serif";
     font-size: 3.5em;
     font-weight: 700;
     line-height: 1.25em;
