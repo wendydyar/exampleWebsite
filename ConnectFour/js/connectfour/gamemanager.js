@@ -126,7 +126,13 @@ define(['connectfour/aifactory', 'connectfour/gamemodel', 'connectfour/gameviewe
             }
             else {
                 //Create a new gamepiece
-                _oGameViewer.setCurrentGamePiece(new gamepiece.GamePiece(_oGameModel.getCurrentPlayer().getId(), _oGameModel.getCurrentPlayer().getStyle(), _oGameModel.getCurrentPlayer().getWinStyle(), event, nColumnId));
+				if(event){
+					//If the gamepiece was created by a user's action, pass the event along to the gamepiece creation
+					_oGameViewer.setCurrentGamePiece(new gamepiece.GamePiece(_oGameModel.getCurrentPlayer().getId(), _oGameModel.getCurrentPlayer().getStyle(), _oGameModel.getCurrentPlayer().getWinStyle(), event, nColumnId));
+				}else{
+					_oGameViewer.setCurrentGamePiece(new gamepiece.GamePiece(_oGameModel.getCurrentPlayer().getId(), _oGameModel.getCurrentPlayer().getStyle(), _oGameModel.getCurrentPlayer().getWinStyle(), null, nColumnId));
+				}
+                
                 _oGameViewer.setBooleanIsFloatingGamePiece(true);
             }
         }
