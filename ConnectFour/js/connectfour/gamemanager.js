@@ -41,10 +41,13 @@ define(['connectfour/aifactory', 'connectfour/gamemodel', 'connectfour/gameviewe
 			var oModelOptions = {};
 			
             if (oOptions) {
+				//Single Player vs. Multiplayer Option
                 if (oOptions.bIsSinglePlayer) {
                     //Play the AI
-					//AIFactory
+					//Create an AIFactory
 			        _oAIFactory = new aifactory.AIFactory();
+					//The AI is always the second player in the players array because it is always the maximizer
+					//in the heuristicsengine.js calculations
 					oModelOptions['players'] = [_oPlayer0, _oPlayerAI];
 					_nDifficultyLevel = oOptions.nDifficultyLevel;  
                 }
@@ -52,6 +55,12 @@ define(['connectfour/aifactory', 'connectfour/gamemodel', 'connectfour/gameviewe
                     //Multiplayer game
                     oModelOptions['players'] = [_oPlayer0, _oPlayer1];
                 }
+				//StartingPlayer
+				if(oOptions.bStartWithSecondPlayer){
+					oModelOptions['startingPlayer'] = oModelOptions['players'][1];
+				}else{
+					oModelOptions['startingPlayer'] = oModelOptions['players'][0];
+				}
             }
             else {
                 //Default
@@ -61,11 +70,11 @@ define(['connectfour/aifactory', 'connectfour/gamemodel', 'connectfour/gameviewe
 			    oModelOptions['players'] = [_oPlayer0, _oPlayerAI]; 
 				//Default difficulty level (medium)
 				_nDifficultyLevel = 8;
+				//Starting Player
+				oModelOptions['startingPlayer'] = oModelOptions['players'][0];
             }
 			
-			//Additional Options
-			//The player at [0] should always start the game because it is the minimizer player for the minimax algorithm
-			oModelOptions['startingPlayer'] = oModelOptions['players'][0];
+			//Setup Scoreboard
 			oModelOptions['scoreBoard'] = new scoreboard.ScoreBoard(oModelOptions['players'][0], oModelOptions['players'][1]);
 			
 			//Create the game model
@@ -74,7 +83,7 @@ define(['connectfour/aifactory', 'connectfour/gamemodel', 'connectfour/gameviewe
             //Create Game Viewer
             var oViewerOptions = {
                 gameModel: _oGameModel,
-                handleStartNewGame: handleStartNewGame,
+                handleStartNewGame: self.handleStartNewGame,
                 handleStartNewMove: handleStartNewMove, 
 				handleMouseMove: handleMouseMove,   
 				handleEndNewMove: handleEndNewMove,
@@ -89,7 +98,7 @@ define(['connectfour/aifactory', 'connectfour/gamemodel', 'connectfour/gameviewe
 			}
         }
 		
-        var handleStartNewGame = function(oOptions){
+        this.handleStartNewGame = function(oOptions){
 			//Update the Model
 			_updateModelToClearGamePieces();
 			//Zero Scores

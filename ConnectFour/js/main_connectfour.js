@@ -19,4 +19,7 @@ function   (            gamemanager) {
 	//START!
 	var oGameManager = new gamemanager.GameManager();
 	oGameManager.startGame();
+	
+	//Expose Game Manager to window for Selenium testing
+	window.__oGameManager = oGameManager;
 });
