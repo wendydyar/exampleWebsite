@@ -106,6 +106,10 @@ define(['connectfour/aifactory', 'connectfour/gamemodel', 'connectfour/gameviewe
 			return _oGameViewer;
 		}
 		
+		this.getRulesEngine = function(){
+			return rulesengine;
+		}
+		
         this.handleStartNewGame = function(oOptions){
 			//Update the Model
 			_updateModelToClearGamePieces();
