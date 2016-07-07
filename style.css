@@ -3,14 +3,14 @@ body{
     color: #a6a8ab;
     font-size: 1em;
     line-height: 1.5;
-    min-width: 655px;
+    margin: 0px 0px 0px 0px;
 }
 .section {
     position: relative;
-    width: 100%;
+    width: 100vw;
 }
 .wrapper{
-    width: 100%;
+    width: 100vw;
     height: 100%;
     position: relative;
 }
@@ -66,13 +66,23 @@ body{
     font-weight: 700;
     line-height: 1.25em;
     text-rendering: optimizeLegibility;
+	white-space: nowrap;
 }
+/*mobile*/
 .captionContainer{
     position: absolute;
-    top: 275px;
+    top: 300px;
     padding: 20px 50px 20px 50px;
     z-index: 20;
     background-color: rgba(255, 255, 255, 0.5);
+	width: 100%;
+    text-align: center;
+}
+/*tablet and desktop*/
+@media only screen and (min-width: 600px) {
+	.captionContainer{
+		width: auto;
+	}
 }
 .caption{
     color: #404041;
@@ -142,11 +152,18 @@ a{
 .sectionContent{
     position: relative;
     float: left;
-    width: 29%;
-    margin-top: 40px;
+    width: 96%;
+    margin-top: 0px;
     margin-bottom: 20px;
     margin-left: 2%;
     margin-right: 2%;
+}
+/*tablet and desktop*/
+@media only screen and (min-width: 600px) {
+	.sectionContent{
+		width: 29%;
+        margin-top: 40px;
+	}
 }
 h3{
     color: #a6a8ab;
@@ -161,16 +178,27 @@ h3{
     position: relative;
     width: 200px;
     height: 210px;
-    float: left;
+    left: calc(50% - 100px);
     background-image: url("./images/WendyEdenRoc2.jpg");
     background-size: cover;
     border-radius: 50%;
-    margin: 0px 10px 30px 10px;
+    margin: 0px;
 }
 .myDescription{
     position: relative;
-    padding: 30px 10px 10px 230px;
+    padding: 30px 10px 10px 10px;
     color: #5B6163;
+}
+/*tablet and desktop*/
+@media only screen and (min-width: 600px) {
+	.myPicture{
+		float: left;
+		left: 0px;
+		margin: 0px 10px 30px 10px;
+	}
+	.myDescription{
+		padding: 30px 10px 10px 230px;
+	}
 }
 /*********************************
 *********** Contact **************
@@ -193,6 +221,7 @@ h3{
 }
 .links{
     top: 225px;
+	width: 220px;
 }
 /*********************************
 ********** Animations ************
