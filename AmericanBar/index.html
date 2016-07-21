@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name=viewport content="width=device-width, initial-scale=1">
         <title>Web Design</title>
 		<!-- Needed for using jQuery -->
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -37,23 +38,31 @@
 				<p>Pacific Catch is a modern, comfortable, Westcoast Fish House that combines fine-dining culinary experience with a casual California lifestyle. Dedicated to delivering high quality seafood with a unique perspective, the menu explores preparation styles and ingredients found throughout the Pacific.  We also offer a variety of lunch and dinner Daily Catch specials and a rotation of promotions highlighting a specific region in the Pacific, or local, seasonal offerings.</p>
 			</div>
 			<div class="operation">
-				<h4>Phone</h4>
-				<p>(415) 440-1950</p><br>
+				<div class="centerHorizontally">
+				<div class="operationInfoTile">
+					<h4>Phone</h4>
+				    <p>(415) 440-1950</p>
+				</div>
 				
-				<h4>Location</h4>
-				<p>2027 Chestnut Street<br> San Francisco, CA 94123</p><br>
+				<div class="operationInfoTile">
+					<h4>Location</h4>
+				    <p>2027 Chestnut Street<br> San Francisco, CA 94123</p><br>
+				</div>
 				
-				<h4>Hours</h4>
-				<p><b>M-Th</b> 5pm-11pm</p>
-				<p><b>F-Sa</b> 12pm-11pm</p>
-				<p><b>Su</b> 10am-11pm</p>
+				<div class="operationInfoTile">
+					<h4>Hours</h4>
+				    <p><b>M-Th</b> 5pm-11pm</p>
+				    <p><b>F-Sa</b> 12pm-11pm</p>
+				    <p><b>Su</b> 10am-11pm</p>
+				</div>
+				</div>
 			</div>
 		</div> <!-- end welcome -->
 		
 		
 		<!-- Slider of Food Images -->
 		<!-- Slider -->
-        <div class="slider">
+        <div class="slider" id="foodSlideshow">
             <div class="outer">
                 <div class="innerwrap">
                 	
@@ -73,7 +82,7 @@
 	
 		<!-- Logo above food menu-->
 		<div class="foodLogo">
-			<div class="centerBoth"><img src="./images/pacific_catch_logo.png"></div>
+			<div class="foodLogoContainer centerBoth"><img src="./images/pacific_catch_logo.png"></div>
 		</div>
 		
 		<!-- Food Menu -->
@@ -81,13 +90,7 @@
 			
 			<div class="centerHorizontally"><h4>Starters</h4></div>
 			<div class="foodCategory centerHorizontally" id="starters">
-			    <div class="column" id="column1">
-					<div class="item">
-						<div class="foodTitle">Bellini</div>
-						<div class="foodPrice">$15</div>
-						<div class="foodDescription"><p>bubbles and grapefruit</p></div> 
-					</div> 
-			    </div>
+			    <div class="column" id="column1"></div>
 				<div class="column" id="column2"></div>
 				<div class="column" id="column3"></div>
 			</div> <!-- end wrapper -->

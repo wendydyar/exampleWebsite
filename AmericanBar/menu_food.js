@@ -3,7 +3,7 @@ function getStarters(){
 	
 	startersArray.push({
 	price: "$12",
-	name:"Primavera Salad",
+	name:"Prima Salad",
 	description:"arugula, cherry tomato, shaved almonds, shallot vinaigrette"
 	});
 	

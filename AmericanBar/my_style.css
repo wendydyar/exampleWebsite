@@ -1,15 +1,19 @@
 /**************************** 
 **        Banner           **
 *****************************/
+body{
+	margin: 0px;
+}
 .banner{
 	width: 100%;
-	min-width: 500px;
+	min-width: 200px;
 	height: 600px;
 	position: relative;
 	background-image: url("./images/bar_table_stools.jpg");
 	background-image: url("./images/beautiful_pacific_ocean.jpg");
 	background-size: cover;
 }
+
 .dimOverlay{
 	width: 100%;
 	height: 100%;
@@ -56,7 +60,8 @@ body{
 	font-size: 30px;
 	position: absolute;
 	top: 450px;
-	min-width: 405px;
+	white-space: nowrap;
+	/*min-width: 405px;*/
 	z-index: 102;
 }
 .subtitle{
@@ -105,10 +110,11 @@ a:hover{
 *****************************/
 .welcomeSection{
 	width: 100%;
-	height: 500px;
+	
 }
 .intro{
 	width: 75%;
+    /*min-width: 375px;*/
 	height: inherit;
 	display: inline-block;
 	position: relative;
@@ -121,6 +127,9 @@ a:hover{
 	height: inherit;
 	display: inline-block;
 	box-sizing: border-box;
+	/*padding: 20px;*/
+}
+.operationInfoTile{
 	padding: 20px;
 }
 h3{
@@ -141,15 +150,17 @@ p{
 *****************************/
 .drinks{
 	width: 100%;
-	height: 600px;
+	height: auto;
 	background-image: url("./images/cocktail_pineapple_filled.jpg");
 	background-size: cover;
 	position: relative;
 }
+
 .wrapper{
 	width: 90%;
-	height: 100%;
+	height: auto;
 	position: relative;
+	display: inline-block;
 	z-index: 102;
 }
 .column{
@@ -167,7 +178,6 @@ p{
 }
 .drinkTitle{
 	width: 75%;
-	height: 30px;
 	line-height: 30px;
 	color: white;
 	font-weight: 600;
@@ -178,7 +188,6 @@ p{
 .drinkPrice{
 	width: 25%;
 	height: 30px;
-	line-height: 30px;
 	display: inline-block;
 	color: white;
 	float: right;
@@ -188,22 +197,22 @@ p{
 	width: 100%;
 	color: white;
 	text-align: left;
+	display: inline-block;
+	/*padding-top: 15px;*/ 
 }
 /**************************** 
 **        Food             **
 *****************************/
 .food{
 	width: 100%;
-	height: 900px;
 }
+
 .foodCategory{
 	width: 90%;
-	height: 25%; 
 	display: inline-block;
 }
 .foodTitle{
 	width: 75%;
-	height: 30px;
 	line-height: 30px;
 	color: black;
 	font-weight: 600;
@@ -214,7 +223,6 @@ p{
 .foodPrice{
 	width: 25%;
 	height: 30px;
-	line-height: 30px;
 	display: inline-block;
 	color: black;
 	float: right;
@@ -224,6 +232,8 @@ p{
 	width: 100%;
 	color: black;
 	text-align: left;
+	display: inline-block;
+	/*padding-top: 15px;*/                         
 }
 .foodLogo{
 	width: 100%;
@@ -232,6 +242,7 @@ p{
 	top: 50%;
 	transform: translateY(-50%);
 }
+
 /**************************** 
 **     Reservations        **
 *****************************/
@@ -240,6 +251,7 @@ p{
 	height: 150px;
 	position: relative;
 }
+
 .r1{
 	height: 70px;
 	padding-top: 10px;
@@ -255,8 +267,7 @@ p{
 **  Slider: Food Images    **
 *****************************/
  .outer {
-    /* width: 600px;  */
-    height: 600px;
+    height: 100%;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -281,6 +292,7 @@ p{
     display: inline-block;
     position: relative;
 }
+
 .arrow {
     transform: translateY(-50%);
     z-index: 101;
@@ -305,6 +317,7 @@ p{
     height: 100%;
     width: 100%;
     background-size: cover;
+	background-position-x: center;
 }
 .imgSource1 {
     background-image: url("./images/Matador-Room-Avocado-Lunch.jpg");
@@ -320,3 +333,119 @@ p{
 *    End of slider styling
 */
 
+/**************************** 
+**     Mobile Styling      **
+*****************************/
+@media only screen and (max-width: 500px){
+	.banner, .welcomeSection{
+		width: 100vw;
+	}
+	.header{
+		width: 80vw;
+	}
+	.header img{
+		width: 100%;
+	}
+	.title{
+		font-size: 7vw;
+        white-space: nowrap;
+        font-weight: bold;
+	}
+	.subtitle{
+		font-size: 6vw;
+	}
+	.menu li{
+		font-size: 14px;
+		line-height: 14px;
+	}
+	.intro{
+		width: 100%;
+	}
+	.operation{
+		width: 100%;
+	}
+	.slider{
+		width: 100vw;
+		height: 400px;
+	}
+	.foodLogo{
+		width: 100vw;
+	}
+	.foodLogoContainer{
+		width: 80vw;
+	}
+	.foodLogoContainer img{
+		width: 100%;
+	}
+	.food{
+		width: 100vw;
+	    height: auto;
+	    padding: 0px;
+	}
+	.foodCategory{
+		width: 98%;
+		height: auto;
+        padding: 20px 10px 20px 10px;
+	}
+	.column{
+		height: auto;
+		padding: 0px;
+	}
+	.item{
+		width: 100%;
+		padding: 5px;
+        box-sizing: border-box;
+	}
+	.foodTitle, .drinkTitle{
+		font-size: 4vw;
+        height: auto;
+        line-height: 5vw;
+	}
+	.foodPrice{
+		font-size: 4vw;
+        line-height: 5vw;
+        vertical-align: middle;
+	}
+	.drinkPrice{
+		display: none;
+	}
+	.drinks{
+		width: 100vw;
+        height: auto;
+	}
+	.drinks .wrapper{
+		width: 98%;
+        height: auto;
+        display: inline-block;
+	}
+	h3{
+		font-size: 7vw;
+	}
+	h4{
+		font-size: 5vw;
+	}
+	.reservations{
+		width: 100vw;
+        height: auto;
+        padding: 0px;
+	}
+	.r2{
+		width: 90%;
+	}
+	
+}
+
+/* Fix item height so items are horizontally aligned among all columns */
+.food .item{
+	min-height: 160px;
+}
+.drinks .item{
+	min-height: 155px;
+}
+
+/* Adjust menu spread for large screens */
+@media only screen and (min-width: 800px){
+	.column{
+		padding: 20px 50px 20px 50px; 
+	}
+}

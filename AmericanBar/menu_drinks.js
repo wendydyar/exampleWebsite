@@ -35,7 +35,7 @@ function getCocktails(){
 	cocktailsArray.push({
 	price: "$12",
 	name: "Green & Amber",
-	description: "vodka, single-malt scotch, honey, lemon, green tea"
+	description: "vodka, single-malt scotch, green tea"
 	});
 	
 	cocktailsArray.push({
