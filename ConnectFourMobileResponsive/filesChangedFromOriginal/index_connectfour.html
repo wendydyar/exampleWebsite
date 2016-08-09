@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name=viewport content="width=device-width, initial-scale=1">
+        <title>MiniMax with AI</title>
+        <!-- Needed for using jQuery -->
+        <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+        <!-- <script type="text/javascript" src="js/script_minimax.js"></script> -->
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+				
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="style/jquery-ui.theme-ui-lightness-2.css">
+		<link rel="stylesheet" type="text/css" href="style/style_connectfour.css">
+        <script data-main="js/main_connectfour.js" src="js/require.js"></script>
+		
+		<!-- Wendy's Portflio TypeKit -->
+        <script src="https://use.typekit.net/bwf0ckr.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+		
+    </head>
+    <body>
+        <div id="shield" class="fullPageCoverage">
+        </div>
+		
+        <div id="settingsPageContainer" class="fullPageCoverage">
+            <div id="settingsPage" class="fullPageCoverage">
+                <div id="menuContainer" class="stronglyCentered">
+                	
+                    <div id="closeButton"></div>
+					
+                    <div class="menuOptionsContainer">
+                        <ul>
+                            <li>
+                                <input type="radio" id="multiplayerOption" name="selector">
+                                <label for="multiplayerOption">
+                                    Multiplayer
+                                </label>
+                                <div class="check">
+                                </div>
+                            </li>
+                            <li>
+                                <input type="radio" id="singlePlayerOption" name="selector" checked>
+                                <label for="singlePlayerOption">
+                                    Single Player
+                                </label>
+                                <div class="check">
+                                    <div class="inside">
+                                    </div>
+                                </div>
+								
+								<div id="sliderContainer">
+                    	<div id="sliderLabelEasy"><p>Easy</p> </div>
+                        <div id="sliderComponentContainer" class="stronglyCentered"><div id="slider"></div></div>
+						<div id="sliderLabelHard"><p>Hard</p> </div>
+                    </div>
+								
+                            </li>
+                        </ul>
+                    </div>           	
+					<!--
+                    <div id="sliderContainer">
+                    	<div id="sliderLabelEasy"><p>Easy</p> </div>
+                        <div id="sliderUI" class="stronglyCentered"><div id="slider"></div></div>
+						<div id="sliderLabelHard"><p>Hard</p> </div>
+                    </div>
+					-->
+					<button id="newGame">Play</button>
+					
+					</div>
+					
+					
+					
+                </div>
+            </div>
+        </div>
+		
+		
+		<div id="gamePageContainer" class="fullPageCoverage">
+        <div id="gameComponentsContainer" class="stronglyCentered">
+        
+			
+			<div id="interactionColumnContainer"></div>
+		
+            <div id="gamePieceContainer">
+            </div>
+            <div id="header">
+                <div id="settingsButton">
+                </div>
+            </div>
+            <div id="centerBody">
+            	<div id="dropHighlighterContainer"></div>
+                <div id="gameContainer">
+                    <svg id="svg" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="svg_fill_gradient_oval" spreadMethod="pad" gradientTransform="rotate(-45,0.5,0.5) translate(0,0.15) scale(1,0.75)">
+                                <stop stop-color="#00007f" stop-opacity="0.99609" offset="0"/><stop stop-color="#0000ff" stop-opacity="0.99609" offset="1"/>
+                            </radialGradient>
+                            <linearGradient spreadMethod="pad" y2="0.87891" x2="0.9" y1="0" x1="0" id="svg_fill_gradient_linear">
+                                <stop stop-color="#0000ff" stop-opacity="0.99609" offset="0.23438"/><stop stop-color="#0000b3" stop-opacity="0.99609" offset="0.875"/>
+                            </linearGradient>
+                        </defs>
+                        <path id="drawing">
+                        </path>
+                        <path id="circles">
+                        </path>
+                        <path id="outline">
+                        </path>
+                        <path id="border">
+                        </path>
+                    </svg>
+                </div><!--end gameContainer-->
+                <div id="gameContainerFrame"></div><!--end gameContainerFrame-->
+            </div><!--end centerBody-->
+            <div id="footer">
+                <div id="scoreBoardContainer">
+                    <div id="scoreBoard">
+                    </div>
+                </div>
+            </div>
+        </div>
+		</div>
+    </body>
+</html>
