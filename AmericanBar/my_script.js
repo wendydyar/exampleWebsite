@@ -152,13 +152,15 @@ $(document).ready(function(){
         var yDiff = yDown - yUp;
         
         if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
-            if (xDiff > 0) {
+            if (xDiff > 30) {
                 /* swipe left */
 				handleNextSlide();
             }
             else {
-                /* swipe right */
-				handlePreviousSlide();
+				if (xDiff < 30){
+					/* swipe right */
+				    handlePreviousSlide();
+				}  
             }
         }
         else {

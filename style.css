@@ -158,6 +158,7 @@ a{
     transition: color 0.2s linear;
     color: lightseagreen;
     text-decoration: underline;
+	font-weight: bold;
 }
 .sectionContent{
     position: relative;
