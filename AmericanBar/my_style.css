@@ -390,6 +390,7 @@ p{
 	}
 	.food{
 		width: 100vw;
+        overflow: hidden;
 	    height: auto;
 	    padding: 0px;
 	}
