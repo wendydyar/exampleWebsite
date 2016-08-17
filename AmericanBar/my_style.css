@@ -1,4 +1,4 @@
-/**************************** 
+/****************************
 **        Banner           **
 *****************************/
 html,body
@@ -7,11 +7,14 @@ html,body
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
-	/* momentum scrolling */
-	overflow-y: scroll; /* has to be scroll, not auto */
+    /*overflow-x: hidden;*/ /* cannot be in both the html and body for smooth scrolling to work */
     -webkit-overflow-scrolling: touch;
 }
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
 .banner{
 	width: 100%;
 	min-width: 200px;
@@ -35,13 +38,13 @@ html,body
     position: relative;
 	left: 50%;
 	transform: translateX(-50%);
-	text-align: center;	
+	text-align: center;
 }
 .centerVertically{
     position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	vertical-align: middle;	
+	vertical-align: middle;
 }
 .centerBoth{
 	position: absolute;
@@ -50,7 +53,7 @@ html,body
     transform: translateX(-50%)translateY(-50%);
     display: inline-block;
 }
-/**************************** 
+/****************************
 **    Header /Titles       **
 *****************************/
 .header{
@@ -79,7 +82,7 @@ body{
 	top: 500px;
 	z-index: 102;
 }
-/**************************** 
+/****************************
 **          Menu           **
 *****************************/
 .menu{
@@ -113,12 +116,12 @@ a {
 a:hover{
 	color: rgba(255,255,255, 1.0);
 }
-/**************************** 
+/****************************
 **     Welcome Section     **
 *****************************/
 .welcomeSection{
 	width: 100%;
-	
+
 }
 .intro{
 	width: 75%;
@@ -153,7 +156,7 @@ p{
 	color: gray;
 	font-size: 14px;
 }
-/**************************** 
+/****************************
 **        Drinks           **
 *****************************/
 .drinks{
@@ -206,9 +209,9 @@ p{
 	color: white;
 	text-align: left;
 	display: inline-block;
-	/*padding-top: 15px;*/ 
+	/*padding-top: 15px;*/
 }
-/**************************** 
+/****************************
 **        Food             **
 *****************************/
 .food{
@@ -241,7 +244,7 @@ p{
 	color: black;
 	text-align: left;
 	display: inline-block;
-	/*padding-top: 15px;*/                         
+	/*padding-top: 15px;*/
 }
 .foodLogo{
 	width: 100%;
@@ -251,7 +254,7 @@ p{
 	transform: translateY(-50%);
 }
 
-/**************************** 
+/****************************
 **     Reservations        **
 *****************************/
 .reservations{
@@ -271,7 +274,7 @@ p{
 	width: 100%;
 }
 
-/**************************** 
+/****************************
 **  Slider: Food Images    **
 *****************************/
  .outer {
@@ -341,7 +344,7 @@ p{
 *    End of slider styling
 */
 
-/**************************** 
+/****************************
 **     Mobile Styling      **
 *****************************/
 @media only screen and (max-width: 500px){
@@ -440,7 +443,7 @@ p{
 	.r2{
 		width: 90%;
 	}
-	
+
 }
 
 /* Fix item height so items are horizontally aligned among all columns */
@@ -454,6 +457,6 @@ p{
 /* Adjust menu spread for large screens */
 @media only screen and (min-width: 800px){
 	.column{
-		padding: 20px 50px 20px 50px; 
+		padding: 20px 50px 20px 50px;
 	}
 }

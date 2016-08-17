@@ -9,6 +9,7 @@ html,body
 }
 body{
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 body{
     font-family:"ff-enzo-web", "futura-pt", sans-serif;
