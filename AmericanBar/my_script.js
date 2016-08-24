@@ -111,7 +111,7 @@ $(document).ready(function(){
             var advance = counter * (100 / numSlides);
             $('.inner').animate({
                 left: "-" + advance + "%"
-            }, 400);
+            }, 400, "easeInOutQuart");
         }
 	}
 
@@ -121,7 +121,7 @@ $(document).ready(function(){
             var advance = counter * (100 / numSlides);
             $('.inner').animate({
                 left: "-" + advance + "%"
-            }, 400);
+            }, 400, "easeInOutQuart");
         }
 	}
 
