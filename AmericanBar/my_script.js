@@ -104,27 +104,6 @@ $(document).ready(function(){
 	 */
 	var counter = 0;
     var numSlides = $('.innerwrap > div').length;
-/*
-    var handleNextSlide = function(){
-		if (counter > 0) {
-            counter--;
-            var advance = counter * (100 / numSlides);
-            $('.inner').animate({
-                left: "-" + advance + "%"
-            }, 400);
-        }
-	}
-
-    var handlePreviousSlide = function(){
-		if (counter < (numSlides - 1)) {
-            counter++;
-            var advance = counter * (100 / numSlides);
-            $('.inner').animate({
-                left: "-" + advance + "%"
-            }, 400);
-        }
-	}
-	*/
 
     var handlePreviousSlide = function(){
 		if (counter > 0) {
@@ -174,14 +153,16 @@ $(document).ready(function(){
 
         var xDiff = xDown - xUp;
         var yDiff = yDown - yUp;
+		console.log("xDiff = " + xDiff);
+		console.log("yDiff = " + yDiff);
 
         if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
-            if (xDiff > 30) {
+            if (xDiff > 5) {
                 /* swipe left */
 				handleNextSlide();
             }
             else {
-				if (xDiff < 30){
+				if (xDiff < 5){
 					/* swipe right */
 				    handlePreviousSlide();
 				}
