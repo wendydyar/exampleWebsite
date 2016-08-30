@@ -158,11 +158,19 @@ span{
     background-color: lightseagreen;
     color: white;
 }
-a{
+.workSection .sectionContent a{
     transition: color 0.2s linear;
-    color: lightseagreen;
-    text-decoration: underline;
+    text-decoration: none;
 	font-weight: bold;
+    color: white;
+    background-color: lightseagreen;
+    border: 1px solid lightseagreen;
+    padding: 12px 40px;
+    border-radius: 40px;
+}
+.workSection .sectionContent a:hover{
+    color: lightseagreen;
+    background-color: #F1F3F3;
 }
 .sectionContent{
     position: relative;
@@ -185,6 +193,14 @@ h3{
 }
 #testvideo{
 	color: #ff6600;
+    text-decoration: underline;
+	font-weight: bold;
+    position: relative;
+    top: 0px;
+    background-color: #F1F3F3;
+    padding: 0px;
+    border: 0px;
+    border-radius: 0px;
 }
 /*********************************
 *********** About Me *************
