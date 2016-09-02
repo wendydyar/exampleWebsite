@@ -3,7 +3,7 @@ html,body{
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 	overflow-y: hidden;
 }
 body{
@@ -225,21 +225,23 @@ input[type=radio]:checked ~ label{
 	color: navy;
 }
 #gamePageContainer{
-	
+
 }
 
 /* Built primarily for desktop */
 #gameComponentsContainer {
     width: calc((95vmin - 100px - 50px)*7/5);
-    height: 95vmin; /* 95% of the min viewport size */ 
+    height: 95vmin; /* 95% of the min viewport size */
     min-width: 250px;
 	min-height: 260px;
+    max-height: 800px;
+    max-width: 910px;
 }
 
 /* Built primarily for desktop */
 #header{
     width: 100%;
-    height: 100px; 
+    height: 100px;
 	position: absolute;
     top: 0px;
     left: 0px;
@@ -249,7 +251,7 @@ input[type=radio]:checked ~ label{
 /* Built primarily for desktop */
 #centerBody{
     width: 100%;
-	height: calc(100% - 100px - 50px); 
+	height: calc(100% - 100px - 50px);
     position: absolute;
     top: 100px;
     left: 0px;
@@ -513,7 +515,7 @@ svg{
 	#scoreSeparator, .displayPlayerName, .displayPlayerScore{
 		font-size: 14px;
 		white-space: nowrap;
-        
+
 	}
 	.displayPlayerName{
 		padding: 2px 10px 2px 10px;
@@ -530,20 +532,20 @@ svg{
 		font-size: 10px;
 	}
 }
-	
+
 /* mobile */
 /* portrait orientation */
 @media only screen and (max-width: 800px) and (orientation: portrait) and (max-aspect-ratio: 10/13){
 	#gameComponentsContainer {
-        width: 95vw;  
-        height: calc(95vw*5/7 + 50px + 50px); 
+        width: 95vw;
+        height: calc(95vw*5/7 + 50px + 50px);
     }
 	#header{
 		height: 50px;
 	}
 	#centerBody{
         width: 100%;
-	    height: calc(100% - 50px - 50px); 
+	    height: calc(100% - 50px - 50px);
         position: absolute;
         top: 50px;
         left: 0px;
@@ -572,14 +574,14 @@ svg{
 @media only screen and (max-width: 800px) and (orientation: landscape) and (min-aspect-ratio: 13/10){
 	#gameComponentsContainer {
         width: calc((95vh - 50px - 35px)*7/5);
-        height: 95vh; 
+        height: 95vh;
     }
 	#header{
 		height: 50px;
 	}
 	#centerBody{
         width: 100%;
-	    height: calc(100% - 50px - 35px); 
+	    height: calc(100% - 50px - 35px);
         position: absolute;
         top: 50px;
         left: 0px;
@@ -609,7 +611,7 @@ svg{
         height: 30px;
         padding-top: 5px;
     }
-	
+
 }
 
 
